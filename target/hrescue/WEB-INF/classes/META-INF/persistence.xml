@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.jobinfr_Easyjob_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.jobinfr.easyjob.domain.DateTraining</class>
+    <class>com.jobinfr.easyjob.domain.Role</class>
+    <class>com.jobinfr.easyjob.domain.Apply</class>
+    <class>com.jobinfr.easyjob.domain.User</class>
+    <class>com.jobinfr.easyjob.domain.Message</class>
+    <class>com.jobinfr.easyjob.domain.Receiver</class>
+    <class>com.jobinfr.easyjob.domain.Training</class>
+    <class>com.jobinfr.easyjob.domain.Jobseeker</class>
+    <class>com.jobinfr.easyjob.domain.CvType</class>
+    <class>com.jobinfr.easyjob.domain.Humanressources</class>
+    <class>com.jobinfr.easyjob.domain.Timeslot</class>
+    <class>com.jobinfr.easyjob.domain.Cv</class>
+    <class>com.jobinfr.easyjob.domain.BusinessSector</class>
+    <class>com.nuitinfo.hrescue.domain.Role</class>
+    <class>com.nuitinfo.hrescue.domain.UserRelation</class>
+    <class>com.nuitinfo.hrescue.domain.Vaccin</class>
+    <class>com.nuitinfo.hrescue.domain.UserHasVaccin</class>
+    <class>com.nuitinfo.hrescue.domain.InformationHasUser</class>
+    <class>com.nuitinfo.hrescue.domain.Information</class>
+    <class>com.nuitinfo.hrescue.domain.User</class>
+    <class>com.nuitinfo.hrescue.domain.Message</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/easyjob-db?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="makeit"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="M@keIT"/>
+    </properties>
+  </persistence-unit>
+</persistence>

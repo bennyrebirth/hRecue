@@ -1,0 +1,77 @@
+<!-- 
+    ***********************************************************************
+    * This page is just a template that will be duplicated in other pages *
+    *                      PLEASE DON'T TOUCH                             *
+    ***********************************************************************
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- *****************************************
+             * WE INCLUDE THE HEAD META TAG FRAGMENT *
+             ***************************************** -->
+        <head th:replace="fragments/metaTag :: metaTag"></head>
+        
+        <!-- *****************************************************
+             *****************************************************
+             **** Here we can include other CSS and title tag ****
+             ***************************************************** 
+             ***************************************************** -->
+        
+    </head>
+    
+    <body>
+        
+        <div class="outer">
+            
+            <!-- ***********************************
+                 * WE INCLUDE THE SIDEBAR FRAGMENT *
+                 * sidebarFragmentXXXXXXXX         *
+                 * XXXXXXXX = {Jobseeker,Firm,Hr}  *
+                 *********************************** -->
+            <div th:replace="fragments/sidebarMenuByRole :: sidebarFragmentJobseeker"></div>
+            
+            <!-- Mainbar starts -->
+            <div class="mainbar">
+                
+            <!-- ****************************************
+                 * WE INCLUDE THE MAINBAR HEAD FRAGMENT *
+                 **************************************** -->
+            <div th:replace="fragments/templateLayout :: mainbarheadFragment"></div>
+            
+            <div class="main-content">
+                <div class="container">
+
+                   <!-- *****************************************************
+                        *****************************************************
+                        ****   Here you put the content of your page     ****
+                        ****   You can remove the div.page-content       ****
+                        ****           and add your content              ****
+                        ***************************************************** 
+                        ***************************************************** -->
+                    
+                    
+                    <div class="page-content">
+                        <!-- Heading -->
+                        <div class="single-head">
+                                <!-- Heading -->
+                                <h3 class="pull-left"><i class="fa fa-desktop purple"></i> PAGE TITLE</h3>
+                                <!-- Bread crumbs -->
+                                <div class="breads pull-right">
+                                        <strong>Nav</strong> : <a href="#">Home</a> / <a href="#">path</a> / breadcrumb
+                                </div>
+                                <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+        <jstag th:replace="fragments/jsImport :: jsImport"></jstag>
+        
+    </body>
+</html>
