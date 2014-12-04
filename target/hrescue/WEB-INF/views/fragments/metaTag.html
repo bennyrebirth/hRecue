@@ -3,42 +3,27 @@
 <!--[if IE 9]> <html lang="fr" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
 
-
+    <head></head>
 <!-- 
      ************************************
      * Template META DATA FOR ALL PAGES *
      ************************************
 -->
 
-<head th:fragment="metaTag" th:remove="tag">
+<metaTag th:fragment="metaTag" th:remove="tag">
 
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Meta à importer sur toutes les pages" name="description" />
-    <meta content="Makeit Entreprise" name="author" />
+    <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <meta name="author" content="Pointer Exception"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/resources/css/ripples.min.css}" rel="stylesheet"/>
+        <link th:href="@{/resources/css/material-wfont.min.css}" rel="stylesheet"/>
+        <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
    
-    <!-- GLOBAL Styles -->
-    <!-- Bootstrap CSS -->
-    <link th:href="@{/resources/css/bootstrap.min.css}" rel="stylesheet"/>
-    <!-- Font awesome CSS -->
-    <link th:href="@{/resources/css/font-awesome.min.css}" rel="stylesheet"/>		
-    <!-- jQuery gritter -->
-    <link th:href="@{/resources/css/jquery.gritter.css}" rel="stylesheet"/>
-    <!-- Custom Color CSS -->
-    <link th:href="@{/resources/css/less-style.css}" rel="stylesheet"/>	
-    <link th:href="@{/resources/css/ripples.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/material-wfont.min.css}" rel="stylesheet"/>
-    <link th:href="@{/resources/css/materialPreloader.css}" rel="stylesheet"/>
-    <!-- Custom CSS -->
-    <link th:href="@{/resources/css/style.css}" rel="stylesheet"/>
-    <!--Easyjob css addon-->
-    <link th:href="@{/resources/css/easyjob-addon.css}" rel="stylesheet"/>
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" th:href="@{/resources/favicon.ico}"/>
-   <!-- END GLOBAL Styles -->
-   
-</head>
+</metaTag>
 
 <body></body>
 

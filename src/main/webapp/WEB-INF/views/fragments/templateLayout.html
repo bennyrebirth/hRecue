@@ -6,172 +6,56 @@
 <!--<![endif]-->
 
 
-    <!-- 
-    **********************
-    *  Template USER     *
-    **********************
-    -->
-    
+   
     <head></head>
 
     <body>
 
-
-
-        <!-- *****************************************
-             * Sidebar starts - Fragment for Sidebar *
-             * Just for example                      *
-             ***************************************** -->
-        <div th:fragment="sidebarFragment" class="sidebar">
-
-            <div class="sidey">
-
-                <!-- Sidebar navigation starts -->
-
-                <!-- Responsive dropdown -->
-                <div class="sidebar-dropdown"><a href="#" class="br-red"><i class="fa fa-bars"></i></a></div>
-
-                <div class="side-nav">
-
-                    <div class="side-nav-block">
-                        <!-- Sidebar heading -->
-                        <h4>SIDEBAR HEADING</h4>
-                        <!-- Sidebar links -->
-                        <ul class="list-unstyled">
-                            <li><a th:href="@{/Jobseeker/Accueil}"><i class="fa fa-desktop"></i> Dashboard</a></li>
-                            <li><a href="#"><i class="fa fa-bullseye"></i> Menu with badge <span class="badge badge-danger pull-right">6</span></a></li>
-                            <!-- Mainmenu with submenu -->
-                            <li class="has_submenu">
-                                <a href="#"><i class="fa fa-file"></i> Menu with submenu <span class="nav-caret fa fa-caret-down"></span></a>
-                                <!-- Submenu -->
-                                <ul class="list-unstyled">
-                                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Calendar</a></li>
-                                </ul>
-                            </li>
+        <div th:fragment="navbarMenu" class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">Action</a></li>
+                            <li><a href="javascript:void(0)">Another action</a></li>
+                            <li><a href="javascript:void(0)">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Dropdown header</li>
+                            <li><a href="javascript:void(0)">Separated link</a></li>
+                            <li><a href="javascript:void(0)">One more separated link</a></li>
                         </ul>
-                    </div>
-
-                    <div class="side-nav-block">
-                        <h4>Other Menu title</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="active"><i class="fa fa-desktop"></i> Other menu</a></li>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" placeholder="Search"/>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)">Action</a></li>
+                            <li><a href="javascript:void(0)">Another action</a></li>
+                            <li><a href="javascript:void(0)">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="javascript:void(0)">Separated link</a></li>
                         </ul>
-                    </div>
-
-
-                </div>
-
-                <!-- Sidebar navigation ends -->
-
+                    </li>
+                </ul>
             </div>
         </div>
-        <!-- Sidebar ends -->
 
-
-        <!-- **********************************************
-             * Mainbar head starts - Fragment for Sidebar *
-             ********************************************** -->
-        
-        <div th:fragment="mainbarheadFragment" class="main-head navbar navbar-fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-1 col-sm-2 col-xs-2">
-                        <button id="show-hide-sidebar">
-                            <i class="mdi-navigation-menu"></i>
-                        </button>
-                    </div>
-                    <div class="logo col-md-3 col-sm-4 col-xs-4">
-                        <!-- LOGO -->
-                        <h2>
-                            <a th:href="@{/JobSeeker/Accueil}">
-                                <img th:src="@{/resources/logo.png}" alt="easyjob-logo"/>
-                            </a>
-                        </h2>
-                    </div>
-
-                    <div class="col-md-3 col-sm-4 col-xs-6">
-                        <!-- Search block -->
-                        <div class="head-search">
-                            <form id="navbar-form-search" class="navbar-form nvabar-left" role="form">
-                                <div class="form-control-wrapper">
-                                    <input type="text" class="form-control empty" placeholder="Search ..."/>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-2 hidden-xs">
-                        <!-- Notifications -->
-                        <div class="head-noty text-center">
-                            <!-- Messages -->
-                            <div class="dropdown">
-                                <a href="#" id="messages" data-toggle="dropdown" class="mhead-icon" ><i class="fa fa-envelope"></i> <span class="label label-danger">5</span></a>
-                                <ul class="dropdown-menu" role="button" aria-labelledby="messages">
-
-                                    <!-- Dropdown menu head -->
-                                    <li class="dropdown-head">
-                                        Messages <span class="label label-danger pull-right">5</span>
-                                    </li>
-                                    <!-- Content -->
-                                    <li><a href="#">
-                                            <!-- Title -->
-                                            Hello How are you? <i class="fa fa-reply pull-right"></i>
-                                            <!-- Para -->
-                                            <span>Lorem ipsum dolor sit amet something elit.</span>
-                                            <div class="clearfix"></div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            What are you doing today? <i class="fa fa-reply pull-right"></i>
-                                            <span>Lorem ipsum dolor sit amet something elit.</span>
-                                            <div class="clearfix"></div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            Why don't you come here? <i class="fa fa-reply pull-right"></i>
-                                            <span>Lorem ipsum dolor sit amet something elit.</span>
-                                            <div class="clearfix"></div>
-                                        </a></li>
-
-                                    <li class="dropdown-foot text-center">
-                                        <a href="#">View All</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-
-
-                    <div class="col-md-3 hidden-sm hidden-xs">
-                        <!-- Head user -->
-                        <div class="head-user dropdown pull-right">
-                            <a href="#" data-toggle="dropdown" id="profile">
-                                <!-- Icon 
-                                <i class="fa fa-user"></i>  -->
-
-                                <img th:if="${not #strings.isEmpty(userConnected.userPicture)}" th:src="@{/profilePicture}" alt="" class="img-responsive img-circle avatar-picture"/>
-                                <img th:if="${#strings.isEmpty(userConnected.userPicture)}" alt="" th:attr="data-name=${userConnected.userUsername}" class="img-responsive img-circle avatar-picture initial-picture"/>
-                                
-                                <!-- User name -->
-                                <span th:text="${userConnected.userUsername}">Username</span> <span class="label label-danger">5</span> 
-                                <i class="fa fa-caret-down"></i> 
-                            </a>
-                            <!-- Dropdown -->
-                            <ul class="dropdown-menu" aria-labelledby="profile">
-                                <li><a href="#">View/Edit Profile <span class="badge badge-info pull-right">6</span></a></li>
-                                <li><a href="#">Change Settings</a></li>
-                                <li><a href="#">Messages <span class="badge badge-danger pull-right">5</span></a></li>
-                                <li>
-                                    <form style="display:none" id="form_deconnexion" method="post" th:action="@{/logout}"></form>
-                                    <a href="#" onclick="$('#form_deconnexion').submit();"><i class="fa fa-sign-out"></i>  Log Out</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>	
-            </div>
-        </div>
-        <!-- Mainbar head ends -->
 
 
     </body>	
