@@ -44,16 +44,12 @@
                     <input type="text" class="form-control col-lg-8" placeholder="Search an information ..."/>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="javascript:void(0)">Link</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Action</a></li>
-                            <li><a href="javascript:void(0)">Another action</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
-                        </ul>
+                    <li>
+                        <form style="display:none" id="form_deconnexion" method="post" th:action="@{/logout}"></form>
+                        <a href="#" onclick="$('#form_deconnexion').submit();">
+                            Disconnect
+                            <i class="glyphicon glyphicon-log-out"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
