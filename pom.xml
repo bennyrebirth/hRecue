@@ -394,6 +394,14 @@
         </resources>
         
         <plugins>
+			<plugin>
+              <groupId>com.heroku.sdk</groupId>
+              <artifactId>heroku-maven-plugin</artifactId>
+              <version>0.1.9</version>
+              <configuration>
+                <appName>cryptic-sea-1815</appName>
+              </configuration>
+            </plugin>
             <plugin>
                 <inherited>true</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
