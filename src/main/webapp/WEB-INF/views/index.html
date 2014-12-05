@@ -8,7 +8,7 @@
     </head>
 
     <body>
-
+        <input type="hidden" id="current-menu" th:value="${menu}"/>
         <div th:replace="fragments/templateLayout :: navbarMenu"></div>
         
 
@@ -19,6 +19,9 @@
             </div>
 
         </div>	
+        
+        
+        
         <jstag th:replace="fragments/jsImport :: jsImport"></jstag>
 
     </body>	
