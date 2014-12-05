@@ -44,3 +44,8 @@ img:hover{
     transition: all 0.3s ease-in-out;
     background: #d8d8d8;
 }
+
+input, button, select, textarea {
+padding: 8px;
+min-width: 30%;
+}

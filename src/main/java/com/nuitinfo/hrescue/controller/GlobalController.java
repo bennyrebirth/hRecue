@@ -24,37 +24,37 @@ public class GlobalController {
     @RequestMapping({"/"})
     public String mainPage(HttpServletRequest request, Model model) {
         model.addAttribute("menu", "home") ;
-        return "/index" ;
+        return "/index";
     }
     
     @RequestMapping({"/Informations"})
     public String informationsPage(HttpServletRequest request,Model model) {
         model.addAttribute("menu", "info") ;
-        return "/informations" ;
+        return "/informations";
     }
     
     @RequestMapping({"/Location"})
     public String locationPage(HttpServletRequest request,Model model) {
         model.addAttribute("menu", "location") ;
-        return "/location" ;
+        return "/location";
     }
 
     @RequestMapping({"/AddInformation"})
     public String addInformationPage(HttpServletRequest request,Model model) {
-        model.addAttribute("menu", "addinfo") ;
-        return "/add_information" ;
+        model.addAttribute("menu", "addinformation") ;
+        return "/addinformation";
     }
     
     @RequestMapping({"/ManageInformations"})
     public String manageInformationsPage(HttpServletRequest request,Model model) {
-        model.addAttribute("menu", "manageinfos") ;
-        return "/manage_informations" ;
+        model.addAttribute("menu", "manageinformations") ;
+        return "/manageinformations" ;
     }
     
     @RequestMapping({"/ManageUsers"})
     public String manageUsersPage(HttpServletRequest request,Model model) {
         model.addAttribute("menu", "manageusers") ;
-        return "/manage_users" ;
+        return "/manageusers" ;
     }
     
 }
