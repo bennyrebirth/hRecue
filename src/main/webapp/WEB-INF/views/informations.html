@@ -4,7 +4,6 @@
         <!-- Title here -->
         <title>Nuit de l'info | Informations</title>
         <metaTag th:replace="fragments/metaTag :: metaTag"></metaTag>
-
     </head>
 
     <body>
@@ -15,11 +14,87 @@
         <div class="container">
 
             <div class="well">
-                <p>Information</p>
+                <img alt="infos" style="width:64px; float:left; margin-right: 8px;" src="resources/img/icon_info.png"/><h2>Informations à proximité de Lille :</h2>
+            </div>
+
+            <div class="well">
+                <div id="map" style="width: auto; height: 290px; border: 1px solid red;"></div>
+            </div>
+            
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4"><img style="width:100%" src="http://placehold.it/335x235" alt="info1_img"/></div>
+                    <div class="col-md-8">
+                        <h3>Campagne de vaccination <b>Grippe</b></h3>
+                        <small><i>Déclaré le : 01/12/2014</i></small>
+                        <p>Le système français est grippé. Alors que la grippe saisonnière fait en moyenne 9.000 morts chaque hiver parmi les seules personnes agées de 65 ans et plus, le taux de vaccination, lui, n'en finit plus de chuter. Pour inciter les Français à se protéger, l'Etat a donc lancé une nouvelle campagne de vaccination a destination des dix millions de personnes à risque.</p>
+                        <br></br>
+                        <div class="row" style="float:right; margin-left:8px; margin-right:8px;">
+                            <button type="button" class="btn btn-danger">Localiser l'information</button>
+                            <button type="button" class="btn btn-info">Contacter le centre associé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4"><img style="width:100%" src="http://placehold.it/335x235" alt="info1_img"/></div>
+                    <div class="col-md-8">
+                        <h3>Campagne de vaccination <b>Grippe</b></h3>
+                        <small><i>Déclaré le : 01/12/2014</i></small>
+                        <p>Le système français est grippé. Alors que la grippe saisonnière fait en moyenne 9.000 morts chaque hiver parmi les seules personnes agées de 65 ans et plus, le taux de vaccination, lui, n'en finit plus de chuter. Pour inciter les Français à se protéger, l'Etat a donc lancé une nouvelle campagne de vaccination a destination des dix millions de personnes à risque.</p>
+                        <br></br>
+                        <div class="row" style="float:right; margin-left:8px; margin-right:8px;">
+                            <button type="button" class="btn btn-danger">Localiser l'information</button>
+                            <button type="button" class="btn btn-info">Contacter le centre associé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-4"><img style="width:100%" src="http://placehold.it/335x235" alt="info1_img"/></div>
+                    <div class="col-md-8">
+                        <h3>Campagne de vaccination <b>Grippe</b></h3>
+                        <small><i>Déclaré le : 01/12/2014</i></small>
+                        <p>Le système français est grippé. Alors que la grippe saisonnière fait en moyenne 9.000 morts chaque hiver parmi les seules personnes agées de 65 ans et plus, le taux de vaccination, lui, n'en finit plus de chuter. Pour inciter les Français à se protéger, l'Etat a donc lancé une nouvelle campagne de vaccination a destination des dix millions de personnes à risque.</p>
+                        <br></br>
+                        <div class="row" style="float:right; margin-left:8px; margin-right:8px;">
+                            <button type="button" class="btn btn-danger">Localiser l'information</button>
+                            <button type="button" class="btn btn-info">Contacter le centre associé</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>	
         <jstag th:replace="fragments/jsImport :: jsImport"></jstag>
+        <script type="text/javascript" th:src="@{/resources/js/mapmarker.jquery.js}"></script>
 
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                //set up markers
+                var myMarkers = {"markers": [
+                        {"latitude": "50.603873496347", "longitude": "3.1376910209655", "icon": "resources/img/info.png", "baloon_text": 'Campagne <strong>grippe</strong>'},
+                        {"latitude": "48.8534100", "longitude": "2.3488000", "icon": "resources/img/info.png", "baloon_text": 'Campagne <strong>grippe</strong>'},
+        //            {"latitude": "35.101934057246055", "longitude":"-96.6796875", "icon": "img/castle.png", "baloon_text": 'This is <strong>Oklahoma</strong>'},
+        //            {"latitude": "38.61687046392973", "longitude":"-98.876953125", "icon": "img/house.png", "baloon_text": 'This is <strong>Kansas</strong>'}
+                    ]
+                };
+
+                //set up map options
+                $("#map").mapmarker({
+                    zoom: 5,
+                    center: 'Lille, France',
+                    markers: myMarkers
+                });
+
+            });
+        </script>
+
+        
     </body>	
 </html>
