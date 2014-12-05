@@ -22,32 +22,31 @@
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
-                    <li id="home-menu"><a th:href="@{/}">Home</a></li>
+                    <li id="home-menu"><a th:href="@{/}">Accueil</a></li>
                     <li id="info-menu"><a th:href="@{/Informations}">Informations</a></li>
                     <li id="location-menu"><a th:href="@{/Location}">Location</a></li>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Information <b class="caret"></b></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Add</a></li>
-                            <li><a href="javascript:void(0)">Consult</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
+                            <li class="dropdown-header">Informations</li>
+                            <li><a href="javascript:void(0)">Ajouter une information</a></li>
+                            <li><a href="javascript:void(0)">Administrer les informations</a></li>
                             <li class="divider"></li>
-                            <li class="dropdown-header">Dropdown header</li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
-                            <li><a href="javascript:void(0)">One more separated link</a></li>
+                            <li class="dropdown-header">Utilisateurs</li>
+                            <li><a href="javascript:void(0)">Administrer les utilisateurs</a></li>
                         </ul>
                     </li>
                     
                     
                 </ul>
                 <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search an information ..."/>
+                    <input type="text" class="form-control col-lg-8" placeholder="Rechercher..."/>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <form style="display:none" id="form_deconnexion" method="post" th:action="@{/logout}"></form>
                         <a href="#" onclick="$('#form_deconnexion').submit();">
-                            Disconnect
+                            Déconnecter
                             <i class="glyphicon glyphicon-log-out"></i>
                         </a>
                     </li>

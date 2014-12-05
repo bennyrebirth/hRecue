@@ -38,5 +38,23 @@ public class GlobalController {
         model.addAttribute("menu", "location") ;
         return "/location" ;
     }
+
+    @RequestMapping({"/AddInformation"})
+    public String addInformationPage(HttpServletRequest request,Model model) {
+        model.addAttribute("menu", "addinfo") ;
+        return "/add_information" ;
+    }
+    
+    @RequestMapping({"/ManageInformations"})
+    public String manageInformationsPage(HttpServletRequest request,Model model) {
+        model.addAttribute("menu", "manageinfos") ;
+        return "/manage_informations" ;
+    }
+    
+    @RequestMapping({"/ManageUsers"})
+    public String manageUsersPage(HttpServletRequest request,Model model) {
+        model.addAttribute("menu", "manageusers") ;
+        return "/manage_users" ;
+    }
     
 }
